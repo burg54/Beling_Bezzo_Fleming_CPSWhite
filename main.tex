@@ -1,0 +1,79 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}                                                      %%
+%%%%%%%%%% EXACT 1in MARGINS %%%%%%%                                   %%
+\setlength{\textwidth}{6.5in}     %%                                   %%
+\setlength{\oddsidemargin}{0in}   %% (It is recommended that you       %%
+\setlength{\evensidemargin}{0in}  %%  not change these parameters,     %%
+\setlength{\textheight}{8.5in}    %%  at the risk of having your       %%
+\setlength{\topmargin}{0in}       %%  proposal dismissed on the basis  %%
+\setlength{\headheight}{0in}      %%  of incorrect formatting!!!)      %%
+\setlength{\headsep}{0in}         %%                                   %%
+\setlength{\footskip}{.5in}       %%                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                   %%
+\newcommand{\required}[1]{\section*{\hfil #1\hfil}}                    %%
+\renewcommand{\refname}{\hfil References Cited\hfil}                   %%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%PUT YOUR MACROS HERE
+% comments: feel free to use your favorable symbol
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{color,soul}
+\usepackage{url}
+\usepackage{floatflt,graphicx,color}
+\usepackage{epsfig,pstcol,gastex}
+\usepackage{subfigure,wrapfig}
+\usepackage{clrscode}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{alltt}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{cite}
+
+\newcommand{\boldstart}[1]{{\noindent \bf #1}}
+\newcommand{\boldheading}[1]{{\vspace{0.1in}\noindent \bf #1} \hspace{0.06in}}
+
+\newcommand\PB[1]{\textcolor{blue}{$\spadesuit$\footnote{\textcolor{blue}{$\spadesuit$}\hl{PB: #1}}}}
+\newcommand\CF[1]{\textcolor{red}{$\clubsuit$\footnote{\textcolor{red}{$\clubsuit$}\hl{CF: #1}}}}
+\newcommand\NB[1]{\textcolor{magenta}{$\bigstar$\footnote{\textcolor{magenta}{$\bigstar$}\hl{NB: #1}}}}
+
+
+\title{A Really Cool Title that Doesn't Use ``Learning'' or ``Security''}
+\author{Peter Beling, Nicola Bezzo and Cody Fleming}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+%\section*{Introduction}
+
+% A paragraph about: how complex and ubiquitous CPS are becoming, particularly safety-critical CPS. How scary it is that they are vulnerable to cyber-security threats...
+\noindent As cyber-physical systems (CPS) increasingly pervade the world and\hl{...jkl}.
+
+%A paragraph about the progress, state-of-the-art, and limitations w/r/t these problems...
+\CF{not totally necessary for a white paper, but this could help us figure out what we want to say...}Current approaches to securing CPS can be broken down into (1) perimeter-oriented security, or hardening, that attempts to prevent compromises from happening and (2) resilience-based security that adapts and maintains service in the face of threats and compromises. Both approaches come at a cost and have limitations. There is currently no approach for deciding which components of a CPS need to be secured, with which method(s), given the current state of potential threats. Furthermore, most techniques do not yet handle many classes of threats that do not currently exist.
+
+%do something new and different, with 3 (?) main pillars or thrusts to the work:
+We propose to address these limitations and challenges by asking the following fundamental question\CF{more than one?}: \hl{blah blah blah}? We will focus not only on the response of a particular component to a threat or compromise. Rather, we will also focus on the {\em overall system response} relative to its performance objectives and safety constraints. Furthermore, many of the problems in CPS arise out of the interactions not only among components but also among distributed, autonomous agents. How should a system of distributed agents respond to a threat in order to maximize overall system performance while minimizing risk?
+To answer these questions, we propose the following thrusts, and perhaps more importantly, the integration and coupling of these thrusts.
+
+\boldheading{Thrust I -- Model-based Representation of Vulnerabilities in CPS}: something akin to a repository of models that can run virtually in parallel with the real CPS. Not exactly like a Gazebo simulator or high-fidelity Simulink model, although that could be helpful. But a set of models that represent operational/performance goals, formalized safety constraints, behavioral models of system (a la Simulink), as well as more ``attackable'' artifacts, like the types of drivers/OS/chips/etc that actually get attacked
+
+%\medskip
+
+\boldheading{Thrust II -- Prediction of Vulnerability}: not a great title, but I am thinking about more general classes/abstractions of threats based on existing or newly obtain data...NLP...matching threats and vulnerabilities to models
+
+%\medskip 
+
+\boldheading{Thrust III -- Adaptation of Operations} what I was thinking here was not just ``resilience'' of an estimator or control system, but resilience of an overall fleet of autonomous systems. E.g. the Grand Canyon example. By the way, I (Cody) am probably thinking of this in more of a real-time / tactical way than Peter might be, where you are thinking more strategically (longer time horizon) about what to do if you get new information about a class of threats. Perhaps there is no distinction, but if there is, I am confident we can merge/converge...
+
+
+
+\end{document}
