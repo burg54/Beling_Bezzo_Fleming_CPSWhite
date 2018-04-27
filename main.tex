@@ -35,6 +35,8 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{cite}
+\usepackage{todonotes}
+
 
 \newcommand{\boldstart}[1]{{\noindent \bf #1}}
 \newcommand{\boldheading}[1]{{\vspace{0.1in}\noindent \bf #1} \hspace{0.06in}}
@@ -45,12 +47,28 @@
 
 
 \title{A Really Cool Title that Doesn't Use ``Learning'' or ``Security''}
-\author{Peter Beling, Nicola Bezzo and Cody Fleming}
+%\author{Peter Beling, Nicola Bezzo and Cody Fleming}
 \date{}
 
 \begin{document}
 
-\maketitle
+%\maketitle
+
+\input{motivation}
+
+\input{background}
+
+\input{approach}
+
+\input{integration}
+
+\input{broaderimpacts}
+
+\section{Relevant Prior Research Funded by NSF}
+{\bf Cody Fleming} is Co-PI on NSF grant... . {\bf Peter Beling} is ... . {\bf Nicola Bezzo} ...
+
+\end{document}
+
 
 %\section*{Introduction}
 
@@ -74,6 +92,32 @@ To answer these questions, we propose the following thrusts, and perhaps more im
 
 \boldheading{Thrust III -- Adaptation of Operations} what I was thinking here was not just ``resilience'' of an estimator or control system, but resilience of an overall fleet of autonomous systems. E.g. the Grand Canyon example. By the way, I (Cody) am probably thinking of this in more of a real-time / tactical way than Peter might be, where you are thinking more strategically (longer time horizon) about what to do if you get new information about a class of threats. Perhaps there is no distinction, but if there is, I am confident we can merge/converge...
 
+% NOTES from 24 April
+Platforms
+\begin{enumerate}
+    \item study the exact same platform, in the exact same configuration, but in a different context (with different risks / consequences)
+    \item study the same platform, new configuration, same context as original (and maybe a new one with different risks / consequences)
+    \item ...
+    \item translate to new platform, new context, but one attack is common between two (this is the toughest)
+\end{enumerate}
+
+Preliminary work
+\begin{itemize}
+    \item taxonomy of attacks and how they work on various CPS components
+    \item adaptation at control level and detection via state estimation
+\end{itemize}
+
+% there are techniques for detecting attacks; we will collect them
+% we have a way of ``correctly'' modeling systems
+% two levels
+%   1. soft method that frames a set of technical questions. i have learned from past / existing attacks on other systems; how do they apply to the systems i am trying to put out there
+%   2. pulling from libraries of mitigations
+
+% the notion of security is wrong; the notion of consuming the other guy's resources is the right way to go...or introducing uncertainty into his world
 
 
-\end{document}
+% from CPS call
+% CPS Security: What makes CPS security different from traditional cyber security? Are there new directions, or does CPS introduce new risks, at the intersection of the cyber and physical space that promise higher levels of security than those obtained by purely physical or cyber methods? What new protections and defenses are afforded through the interactions among the cyber and physical components of a CPS?
+
+
+%\end{document}
